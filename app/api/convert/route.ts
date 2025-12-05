@@ -133,7 +133,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    return new NextResponse(pptx, {
+    return new NextResponse(pptx as unknown as BodyInit, {
       headers: {
         "Content-Type":
           "application/vnd.openxmlformats-officedocument.presentationml.presentation",
